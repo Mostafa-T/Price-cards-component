@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/*
+
+    =========================
+        CSS INDEX
+    =========================
+
+        -- Global Styling
+        -- Pricing Component 
+        -- Custom Farmework
+        -- Media Queries
+
+*/
+
+/* Start Global styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-position: top right, left 500px;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
+  background-color: hsl(240, 78%, 98%);
+}
+
+/* End Global styling */
+
+/* Start Pricing Component */
+
+header h1 {
+  font-size: 2rem;
+  color: hsl(233, 13%, 49%);
+  letter-spacing: 1px;
+}
+
+.switch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.switch-btn span {
+  color: hsl(234, 14%, 74%);
+}
+
+.switch-btn input[type="checkbox"] {
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  height: 30px;
+  width: 50px;
+  border-radius: 60px;
+  background-color: hsl(237, 63%, 64%);
+  margin: 0rem 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.check-btn::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.switch-btn input:checked[type="checkbox"] {
+  background-color: hsl(236, 72%, 79%);
+}
+
+.switch-btn input:checked[type="checkbox"]::after {
+  left: calc(100% - 27px);
+}
+
+.price-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5rem 0rem;
+}
+
+.card {
+  width: 350px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0px 4px;
+  box-shadow: 0px 0px 10px hsl(234, 14%, 74%);
+}
+
+.special-card {
+  width: 320px;
+  background: linear-gradient(145deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transform: scale(1.05);
+  padding: 2.5rem 2rem;
+  box-shadow: none;
+}
+
+.special-card .card__head h1,
+.special-card .card__head span,
+.special-card .card__features li {
+  color: #fff;
+}
+
+.card__head span {
+  color: hsl(233, 13%, 49%);
+}
+
+.card__head h1 {
+  margin: 1rem 0rem;
+  font-size: 3.5rem;
+  color: hsl(232, 13%, 33%);
+}
+
+.card__features {
+  list-style: none;
+  margin: 1rem 0rem;
+}
+
+.card__features > li {
+  padding: 1rem;
+  border-top: 1px solid;
+  font-size: 0.8rem;
+  color: hsl(233, 13%, 49%);
+}
+
+.card__features li:nth-child(3) {
+  border-bottom: 1px solid;
+}
+
+.card__btn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.7rem;
+  border: 1px solid transparent;
+  background: linear-gradient(145deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.card__btn:hover {
+  border: 1px solid hsl(237, 63%, 64%);
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.special-card .card__btn {
+  background: #fff;
+  color: hsl(236, 72%, 79%);
+}
+
+.special-card .card__btn:hover {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+/* End Pricing Component */
+
+/* Start Media Query */
+@media (max-width: 768px) {
+  .price-cards {
+    flex-direction: column;
+  }
+  .card {
+    min-width: 350px;
+    max-width: 100%;
+    margin: 1rem 0rem;
+  }
+  .special-card {
+    transform: scale(1);
+  }
+}
+
+/* End Media Query */
+
+/* Start Custom Farmework */
+.container {
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  margin: auto;
+  padding: 0px 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* End Custom Farmework */
+
+.attribution {
+  transform: translateY(-20px);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
