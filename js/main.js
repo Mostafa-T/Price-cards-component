@@ -19,7 +19,7 @@ switchBtn.addEventListener('click', function () {
         prices[1].textContent = annualPrices[1];
         prices[2].textContent = annualPrices[2];
 
-    } else if (this.checked == true) {
+    } else {
 
         prices[0].textContent = monthlyPrices[0];
         prices[1].textContent = monthlyPrices[1];
